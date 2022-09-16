@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student details page</title>
+</head>
+<body>
+    <h1>welcome to {{ student.first_name }} {{ student.last_name }} full details page</h1>
+    <hr>
+    <p>{{ student.first_name }}</p>
+    <p>{{ student.middle_name }}</p>
+    <p>{{ student.last_name }}</p>
+    <p>{{ student.date_of_birth }}</p>
+    <p>{{ student.GENDER }}</p>
+    <p>{{ student.other_student_details }}</p>
+
+
+    <a href="{% url 'sms:student-list' %}">Go back to student list page</a>
+
+</body>
+</html>

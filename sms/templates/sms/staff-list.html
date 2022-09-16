@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+    {% block content %}
+
+        {% for staff in staffs %}
+            <li><a href="{% url 'sms:students-details' pk=staff.pk %}">{{ staff.first_name }} {{ staff.last_name }}</a></li>
+        {% endfor %}
+    {% endblock %}

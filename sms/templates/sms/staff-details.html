@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ staff.first_name }} {{ staff.last_name }} details</title>
+</head>
+<body>
+    <ul>
+        <li>First Name: {{ staff.first_name }}</li>
+        <li>Last Name: {{ staff.last_name }}</li>
+        <li>Email: {{ staff.email_address }}</li>
+        <li>Phone Number: {{ staff.phone_number }}</li>
+        <li>Job Title: {{ staff.job_title }}</li>
+        <li>Birth Date: {{ staff.date_of_birth }}</li>
+        <li>Other Staff Details {{ staff.other_staff_details }} </li>
+    </ul>
+</body>
+</html>

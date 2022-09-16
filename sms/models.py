@@ -3,7 +3,7 @@ from django.db import models
 
 # Create your models here.
 
-class Students(models.Model):
+class Student(models.Model):
     GENDER = (
         ('MALE', 'Male'),
         ('FEMALE', 'Female')
@@ -23,7 +23,7 @@ class Course_Scheduled(models.Model):
 
 class Student_Course_Registrations(models.Model):
     course_schedule_id = models.ForeignKey(Course_Scheduled, on_delete=models.CASCADE, related_name='course_sch_id')
-    student_course_registration = models.ForeignKey(Students, on_delete=models.CASCADE)
+    student_course_registration = models.ForeignKey(Student, on_delete=models.CASCADE)
 
 
 class Course_Offered(models.Model):
