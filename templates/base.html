@@ -1,3 +1,5 @@
+{% load  static %}
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,15 +7,16 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <title>Document</title>
 </head>
 <body>
-<div>
-        <a>Home</a>
-        <a>Student</a>
-        <a>Staff</a>
-        <a>Contact us</a>
-        <a>About us</a>
+<div class="sms-nav">
+        <a href="{% url 'pages:index' %}">Home</a>
+        <a href="{% url 'sms:student-list' %}">Student</a>
+        <a href="{% url 'sms:staff-list' %}">Staff</a>
+        <a href="{% url 'pages:contact' %}">Contact us</a>
+        <a href="{% url 'pages:about' %}">About us</a>
     </div>
     <hr>
 {% block content %}

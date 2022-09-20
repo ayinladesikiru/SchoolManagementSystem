@@ -44,10 +44,11 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APP = [
     "debug_toolbar",
+    "rest_framework",
 ]
 
 LOCAL_APPS = [
-    'sms'
+    'sms', 'pages'
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APP + LOCAL_APPS

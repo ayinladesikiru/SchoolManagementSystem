@@ -1,3 +1,4 @@
+{% extends 'base.html' %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,6 +9,7 @@
     <title>Student details page</title>
 </head>
 <body>
+{% block content %}
     <h1>welcome to {{ student.first_name }} {{ student.last_name }} full details page</h1>
     <hr>
     <p>{{ student.first_name }}</p>
@@ -19,6 +21,6 @@
 
 
     <a href="{% url 'sms:student-list' %}">Go back to student list page</a>
-
+{% endblock %}
 </body>
 </html>

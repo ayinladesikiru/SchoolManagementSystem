@@ -1,3 +1,4 @@
+{% extends 'base.html' %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,6 +9,7 @@
     <title>{{ staff.first_name }} {{ staff.last_name }} details</title>
 </head>
 <body>
+{% block content %}
     <ul>
         <li>First Name: {{ staff.first_name }}</li>
         <li>Last Name: {{ staff.last_name }}</li>
@@ -17,5 +19,6 @@
         <li>Birth Date: {{ staff.date_of_birth }}</li>
         <li>Other Staff Details {{ staff.other_staff_details }} </li>
     </ul>
+{% endblock %}
 </body>
 </html>

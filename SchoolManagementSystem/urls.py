@@ -16,11 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
+from .router import routers
 
 admin.site.site_header = 'SCHOOL MANAGEMENT PORTAL'
 
 urlpatterns = [
     path(settings.ADMIN_URL, admin.site.urls),
-    path('', include('sms.urls')),
+    path('api/v1/', include('sms.urls')),
     path('__debug__/', include('debug_toolbar.urls')),
+    path('', include('pages.urls')),
+    path('api/v2/' ,include(routers.urls))
 ]

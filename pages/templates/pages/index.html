@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,15 +7,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Student List</title>
+    <link rel="stylesheet" href="{% static 'pages/css/index.css' %}">
+    <title>Homepage</title>
 </head>
 <body>
 {% block content %}
-    <ul>
-        {% for student in students %}
-            <li><a href="{% url 'sms:students-details' pk=student.pk %}">{{ student.first_name }} {{ student.last_name }}</a></li>
-        {% endfor %}
-    </ul>
+    <h1 style="color: red">Welcome to school management portal</h1>
 {% endblock %}
 </body>
 </html>

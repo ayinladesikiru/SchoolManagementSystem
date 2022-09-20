@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+}
+
+.sms-nav {
+    height: 40px;
+}
+
+.sms-nav a {
+    text-decoration: none;
+    font-size: medium;
+    color: indigo;
+    float: right;
+    padding: 7px 15px;
+    font-weight: bold;
+}
